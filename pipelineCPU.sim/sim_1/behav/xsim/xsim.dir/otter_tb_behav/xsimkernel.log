@@ -1,0 +1,7 @@
+Running: xsim.dir/otter_tb_behav/xsimk.exe -simmode gui -wdb otter_tb_behav.wdb -simrunnum 0 -socket 65324
+Design successfully loaded
+Design Loading Memory Usage: 11280 KB (Peak: 11280 KB)
+Design Loading CPU Usage: 46 ms
+Simulation completed
+Simulation Memory Usage: 12720 KB (Peak: 12720 KB)
+Simulation CPU Usage: 124 ms
