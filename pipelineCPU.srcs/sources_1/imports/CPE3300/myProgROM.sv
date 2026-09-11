@@ -32,8 +32,10 @@ module ProgRom(
     (* ram_decomp = "power" *) logic [31:0] rom [0:16383];
     
     // initialize the ROM with the otter_memory.mem file 
-    
-    
+    initial begin
+        $readmemh("lab2_mat_mult.mem", rom);
+    end
+        
     always_ff @(posedge PROG_CLK) begin
         INSTRUCT <= rom[wordAddr];
     end

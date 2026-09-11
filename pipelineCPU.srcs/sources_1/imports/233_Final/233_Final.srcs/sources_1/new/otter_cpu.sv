@@ -46,11 +46,16 @@ module otter_cpu(rst,intr,iobus_in,clk,iobus_wr,iobus_out,iobus_addr);
     } pipe_reg;
     
     pipe_reg IF_DEV_reg;
+    pipe_reg DEC_EXE_reg;
     
     always_ff @ (posedge clk) begin
         IF_DEV_reg.instruction <= ir;
         IF_DEV_reg.PC <= pc_out;
         IF_DEV_reg.PC_PLUS4 <= pc_out + 4;
+    end
+    
+    always_ff @ (posedge clk) begin
+        DEC_EXE_reg <= IF_DEV_reg;
     end
     
     ProgRom myProgRom(
